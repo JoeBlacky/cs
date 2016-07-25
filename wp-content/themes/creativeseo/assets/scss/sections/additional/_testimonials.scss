@@ -1,0 +1,43 @@
+	$testimonialsBLock: '.cta-testimonials';
+	$testimonials: 			'.testimonials';
+	$testimonial:  			'.testimonial';
+	$tImage: 			 			#{$testimonial}-image;
+	$tTitle: 			 			#{$testimonial}-title;
+	$tHeader: 					#{$testimonial}-header;
+/* ========================================================================== */
+	#{$testimonialsBLock}{
+		padding: 112px 0 79px;
+		h2{
+			margin-bottom: 89px;
+		}
+	}
+	#{$testimonials}{
+		flex-flow: row wrap;
+		align-items: flex-start;
+	}
+	#{$testimonial}{
+		line-height: 24px;
+		@include flex(0 1 33.333334%);
+		.work-title{
+			font-weight: 500;
+			opacity: .7;
+		}
+		p{
+			margin-bottom: 35px;
+			padding-right: 20px;
+		}
+	}
+	#{$tImage}{
+		margin-right: 19px;
+		border-radius: 50%;
+		@include flex(0 0 80px);
+	}
+	#{$tTitle},
+	.work-title{
+		margin: 4px 0;
+	}
+	#{$tHeader}{
+		justify-content: flex-start;
+		margin: 0 0 12px;
+	}
+/* ========================================================================== */

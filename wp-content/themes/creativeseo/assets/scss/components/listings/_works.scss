@@ -1,0 +1,122 @@
+	$worksListing: '.projects-listing';
+	$service: 		 '.service';
+/* ========================================================================== */
+	#{$worksListing}{
+		flex-flow: row wrap;
+		align-items: flex-start;
+		justify-content: flex-start;
+		text-align: center;
+		#{$post}{
+			padding: 0 10px;
+			@include flex(0 1 25%);
+		}
+		#{$postTitle}{
+			color: inherit;
+			@extend %smallHeadline;
+		}
+		#{$postImage}{
+			max-width: 263px;
+			margin: 0 auto 16px;
+			transition: box-shadow $fastSpeed linear;
+		}
+		#{$service}{
+			opacity: 0.7;
+			color: #494B4E;
+			font: 16px/1.5 $headingsFont;
+			&:last-child{
+				&::after{
+					display: none;
+				}
+			}
+			&::after{
+				content: ',';
+				display: inline;
+			}
+		}
+		&.vertical{
+			justify-content: space-between;
+			align-items: stretch;
+			a{
+				height: 100%;
+				max-width: 263px;
+				background: #FFF;
+				min-height: 363px;
+				border-radius: 6px;
+				overflow: hidden;
+				transition:
+					color $fastSpeed linear,
+					box-shadow $fastSpeed linear;
+			}
+			ul{
+				padding: 0 10px;
+			}
+			#{$postTitle}{
+				margin: 0 10px 6px;
+			}
+			#{$postImage}{
+				height: 225px;
+				margin-bottom: 25px;
+				border-radius: 0;
+			}
+		}
+	}
+	#{$notHandheld}{
+		#{$worksListing}{
+			#{$post}{
+				&:hover{
+					#{$postImage}{
+						box-shadow: 0 0px 20px 10px #F3F3F3;
+					}
+				}
+			}
+			&.vertical{
+				a{
+					&:hover{
+						box-shadow: 0 0 10px 0px #303324;
+						#{$postImage}{
+							box-shadow: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $m){
+		#{$worksListing}{
+			#{$post}{
+				@include flex(0 1 33.333334%);
+			}
+		}
+	}
+	@media screen and (max-width: $s){
+		#{$worksListing}{
+			#{$post}{
+				@include flex(0 1 50%);
+			}
+		}
+	}
+	@media screen and (max-width: $xs){
+		#{$worksListing}{
+			#{$post}{
+				padding: 0;
+				@include flex(0 1 100%);
+			}
+			&.vertical{
+				a{
+					max-width: 243px;
+					min-height: 325px;
+				}
+				#{$post}{
+					padding: 0 10px;
+				}
+				#{$postImage}{
+					height: 200px;
+					margin-bottom: 23px;
+				}
+				#{$postTitle}{
+					margin-bottom: 4px;
+				}
+			}
+		}
+	}
+/* ========================================================================== */

@@ -1,0 +1,15 @@
+	$sidebarTitle: '.sidebar-title';
+	$sidebarBlock: '.sidebar-block';
+/* ========================================================================== */
+	#{$sidebar}{
+		.link{
+			font-size: 18px;
+		}
+	}
+	#{$sidebarTitle}{
+		margin: 0 0 11px;
+	}
+	#{$sidebarBlock}{
+		margin: 0 0 27px;
+	}
+/* ========================================================================== */

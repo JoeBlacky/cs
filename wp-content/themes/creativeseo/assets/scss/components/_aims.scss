@@ -1,0 +1,23 @@
+	$aims: '.aims';
+/* ========================================================================== */
+	#{$aims}{
+		padding: 113px 0 142px;
+		color: #747E80;
+		h2{
+			margin: 0 0 14px;
+		}
+		.section-intro{
+			max-width: 596px;
+			margin: 0 auto 83px;
+			font-size: 18px;
+		}
+		#{$usp}{
+			max-width: 1174px;
+			margin: 0 auto;
+		}
+		#{$uspItem}{
+			padding: 0 45px;
+			@include flex(0 1 33.333334%);
+		}
+	}
+/* ========================================================================== */

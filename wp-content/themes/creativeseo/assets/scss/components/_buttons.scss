@@ -1,0 +1,43 @@
+/* ========================================================================== */
+	#{$button}{
+		@extend %button;
+		&-transparent{
+			background: transparent;
+			color: $themeColor;
+		}
+		&#{$button}-secondary{
+			background: #FFF;
+			border-color: #FFF;
+			color: $themeColor;
+		}
+		&#{$button}-shadowed{
+			@extend %buttonShadowed;
+		}
+		&-large{
+			width: $bLarge;
+		}
+		&-small{
+			width: $bSmall;
+		}
+	}
+	#{$notHandheld}{
+		#{$button}{
+			&-transparent{
+				&:hover{
+					color: #FFF;
+					background: $themeColor;
+				}
+			}
+			&-secondary{
+				&:hover{
+					color: #FFF;
+					background: transparent;
+				}
+			}
+			&-shadowed{
+				&:hover{
+					@extend %buttonShadowedHover;
+				}
+			}
+		}
+	}

@@ -1,0 +1,58 @@
+	$socials: '.socials';
+/* Socials ================================================================== */
+	#{$socials}{
+		a{
+			font-size: 0;
+			&::before{
+				font: 16px/1 $iconsFont;
+			}
+		}
+		li{
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 22px;
+		}
+		[href^="http://twitter"],
+		[href^="https://twitter"]{
+			&::before{
+				content: $iTwitter;
+				font-size: 14px;
+			}
+		}
+		[href^="http://facebook"],
+		[href^="https://facebook"]{
+			&::before{
+				content: $iFacebook;
+			}
+		}
+		[href^="http://linkedin"],
+		[href^="https://linkedin"]{
+			&::before{
+				content: $iLinkedIn;
+			}
+		}
+	}
+	#{$notHandheld}{
+		#{$socials}{
+			[href^="http://twitter"],
+			[href^="https://twitter"]{
+				&:hover{
+					color: $cTwitter;
+				}
+			}
+			[href^="http://facebook"],
+			[href^="https://facebook"]{
+				&:hover{
+					color: $cFacebook;
+				}
+			}
+			[href^="http://linkedin"],
+			[href^="https://linkedin"]{
+				&:hover{
+					color: $cLinkedin;
+				}
+			}
+		}
+	}
+/* Media Queries ============================================================ */
+/* ========================================================================== */

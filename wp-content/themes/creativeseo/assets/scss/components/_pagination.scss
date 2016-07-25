@@ -1,0 +1,76 @@
+	$pager: 			'.pagination';
+	$pageNubmber: '.page-numbers';
+/* Pager ==================================================================== */
+	#{$pager}{
+		position: relative;
+		max-width: 915px;
+		margin: 43px 0 101px;
+		text-align: center;
+		.screen-reader-text{
+			display: none;
+		}
+	}
+/* Page Nunbers ============================================================= */
+	#{$pageNubmber}{
+		display: inline-block;
+		line-height: 50px;
+		letter-spacing: 2px;
+		color: #303234;
+		&.next,
+		&.prev{
+			position: absolute;
+			width: 223px;
+			top: 0;
+			margin: 0;
+			line-height: 16px;
+			@extend %button;
+			@extend %buttonShadowed;
+		}
+		&.prev{
+			left: 0;
+		}
+		&.next{
+			right: 0;
+		}
+	}
+	a{
+		&#{$pageNubmber}{
+			margin: 0 9px;
+			color: $themeColor;
+		}
+	}
+	#{$notHandheld}{
+		a{
+			&#{$pageNubmber}{
+				&:not(.prev, .next){
+					color: #303234;
+				}
+			}
+		}
+		#{$pageNubmber}{
+			&.prev,
+			&.next{
+				&:hover{
+					@extend %buttonShadowedHover;
+				}
+			}
+		}
+	}
+/* ========================================================================== */
+	@media screen and (max-width: $s){
+		#{$pager}{
+			padding-top: 78px;
+			margin-bottom: 26px;
+		}
+		#{$pageNubmber}{
+			&.prev,
+			&.next{
+				width: 113px;
+			}
+		}
+		a{
+			#{$pageNubmber}{
+				margin: 0 16px;
+			}
+		}
+	}

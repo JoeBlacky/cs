@@ -1,0 +1,76 @@
+	$contactForm: '.contact-form';
+/* ========================================================================== */
+	#{$contactForm}{
+		max-width: 554px;
+		font-size: 0;
+		form{
+			margin: 0 -3.3%;
+		}
+		p{
+			position: relative;
+			display: inline-block;
+			width: 50%;
+			margin: 0;
+			padding: 3% 3% 9px;
+			white-space: nowrap;
+			span{
+				display: block;
+			}
+		}
+		.wide{
+			width: 100%;
+			padding-bottom: 3%;
+		}
+		[type="submit"]{
+			padding: 16px;
+			letter-spacing: 1.75px;
+			transition:
+				color $fastSpeed linear,
+				box-shadow $fastSpeed linear,
+				background $fastSpeed linear;
+			@extend %shadowed;
+		}
+		[type="submit"],
+		.ajax-loader{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.ajax-loader{
+			width: auto;
+			margin-left: 10px;
+		}
+		#{$validation}{
+			display: none;
+		}
+		.screen-reader-response{
+			&[role="alert"]{
+				padding-bottom: 10px;
+			}
+		}
+	}
+/* Mediq Queries ============================================================ */
+	@media screen and (max-width: $s){
+		#{$contactForm}{
+			p{
+				width: 100%;
+				padding-bottom: 19px;
+			}
+			.wide{
+				padding-bottom: 26px;
+			}
+		}
+	}
+	@media screen and (max-width: $xs){
+		#{$contactForm}{
+			h3{
+				margin: 0 0 12px;
+			}
+			textarea{
+				height: 190px;
+			}
+			[type="submit"]{
+				max-width: 100%;
+			}
+		}
+	}
+/* ========================================================================== */

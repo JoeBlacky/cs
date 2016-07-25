@@ -1,0 +1,74 @@
+$validation: 'span[role="alert"]';
+
+label{
+	display: inline-block;
+	margin: 0 0 9px;
+	color: #747E80;
+	cursor: pointer;
+	@extend %smallTitle;
+}
+
+input,
+select,
+textarea{
+	padding: 16px 38px;
+	border: 1px solid $formsElColor;
+	background: $formsElColor;
+	border-radius: 40px;
+	font: 500 14px/16px $primaryFont;
+	color: #303234;
+	transition: border $fastSpeed linear;
+}
+
+input,
+select{
+	height: 50px;
+}
+
+input:not([type="submit"]),
+textarea{
+	&:focus{
+		border-color: $themeColor;
+	}
+}
+
+textarea{
+	height: 100px;
+	border-radius: 15px;
+	resize: none;
+}
+
+input[type="submit"]{
+	@extend %button;
+}
+
+#{$validation}{
+	font-size: 12px;
+	color: $errorColor;
+}
+
+.screen-reader-response{
+	font-size: 12px;
+	ul{
+		display: none;
+	}
+}
+
+.wpcf7-not-valid{
+	border-color: $errorColor;
+}
+
+.custom-select{
+	position: relative;
+	select{
+		padding-right: 48px;
+	}
+	&::before{
+		position: absolute;
+		content: $iArrowDown;
+		font: 9px/1 $iconsFont;
+		top: 50%;
+    right: 24px;
+    margin-top: -3px;
+	}
+}

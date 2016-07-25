@@ -1,0 +1,94 @@
+	$siteHeader: '.header';
+/* Common =================================================================== */
+	body{
+		font: 400 16px/28px $headingsFont;
+		margin: 0;
+	}
+	a{
+		transition: color $fastSpeed linear;
+	}
+/* Headings ================================================================= */
+	h1{
+		font: 900 64px/1.0625 $primaryFont;
+	}
+	h2{
+		@extend %sectionTitle;
+	}
+	#{$pageTitle}{
+		color: #494B4E;
+		@extend %pageTitle;
+	}
+	#{$smallHeading}{
+		@extend %smallHeadline;
+	}
+	#{$smallTitle}{
+		@extend %smallTitle;
+	}
+/* ========================================================================== */
+	p{
+		margin: 0 0 20px;
+	}
+	div.page{
+		min-height: 100vh;
+		min-width: $minWidth;
+  	flex-direction: column;
+  	align-items: stretch;
+	}
+	.mw{
+		width: 100%;
+		max-width: $mainWidth + $mobileSpacing*2;
+		margin: 0 auto;
+		padding-left: $mobileSpacing;
+		padding-right: $mobileSpacing;
+	}
+	.flex{
+		@include flexbox;
+	}
+	.secondary{
+		background: #EFEEED;
+	}
+	.link{
+		color: $themeColor;
+		@extend %link;
+	}
+	.fill{
+		fill: $themeColor !important;
+	}
+	.t-center{
+		text-align: center;
+	}
+	#{$notHandheld}{
+		a:hover{
+			color: $themeColor;
+		}
+		.link{
+			&:hover{
+				@extend %linkHover;
+			}
+		}
+	}
+/* ========================================================================== */
+@media screen and (max-width: $l){
+	h1{
+		font-size: 54px;
+	}
+	h2{
+		font-size: 34px;
+	}
+}
+@media screen and (max-width: $s){
+	body{
+		font-size: 16px;
+		line-height: 26px;
+	}
+	h1{
+		font-size: 44px;
+		line-height: 1.318181818;
+	}
+	h2{
+		font-size: 24px;
+	}
+	#{$pageTitle}{
+		font-size: 34px;
+	}
+}

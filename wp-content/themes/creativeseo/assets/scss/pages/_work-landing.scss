@@ -1,0 +1,10 @@
+	$worksLanding: '.projects-landing';
+/* ========================================================================== */
+	#{$worksLanding}{
+		padding: 0 20px 69px 15px;
+	}
+	@media screen and (max-width: $l){
+		#{$worksLanding}{
+			padding: 0 30px 50px;
+		}
+	}

@@ -1,0 +1,16 @@
+	$technologiesList: '.technologies-list';
+	$technology: 			 '.technology';
+/* ========================================================================== */
+	#{$technology}{
+		display: inline-block;
+		font-size: 18px;
+		&:last-child{
+			&::after{
+				display: none;
+			}
+		}
+		&::after{
+			content: ',';
+			display: inline;
+		}
+	}

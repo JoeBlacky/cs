@@ -1,0 +1,54 @@
+/* Colors =================================================================== */
+  $themeColor:           #663398;
+  $formsElColor:         #F3F3F3;
+  $errorColor:           #DD4B39;
+/* Socials colors =========================================================== */
+  $cTwitter:             #55ACEE;
+  $cLinkedin:            #0077B5;
+  $cFacebook:            #3B5998;
+/* Fonts ==================================================================== */
+  $headingsFont:        'PlayFair', sans-serif;
+  $primaryFont:         'Raleway',sans-serif;
+  $iconsFont:           'Icomoon', sans;
+/* Transition Speed ========================================================= */
+  $fastSpeed:           .2s;
+  $normalSpeed:         $fastSpeed*1.5;
+  $slowSpeed:           $fastSpeed*2.5;
+/* Not Handheld ============================================================= */
+  $notHandheld:         '.not-handheld';
+/* Images =================================================================== */
+  $preloaderImage:      'url(../img/preloader.svg)';
+/* Icons ==================================================================== */
+  $iFacebook:           '\E900';
+  $iLinkedIn:           '\E901';
+  $iTumblr:             '\E902';
+  $iTwitter:            '\E903';
+  $iMenu:               '\E904';
+  $iArrowDown:          '\E905';
+/* Grid Variables =========================================================== */
+  $grid:                '.grid';
+  $gridItem:            #{$grid}-item;
+/* Indents and Widths ======================================================= */
+  $cu:                  20px;
+  $mobileSpacing:       30px;
+  $maxWidth:            $cu*96; //1920
+  $mainWidth:           $cu*57.2; //1144
+  $l:                   $cu*51.2; //1024
+  $m:                   $cu*45; //900
+  $s:                   $cu*35; //700
+  $xs:                  $cu*25; //500
+  $minWidth:            $cu*16; //320
+/* Variables ================================================================ */
+  $title:               '.title';
+  $subTitle:            '.sub-title';
+  $button:              '.btn';
+  $secondaryPage:       '.secondary-page';
+  $pageTitle:           '.page-title';
+  $smallHeading:        '.small-heading';
+  $smallTitle:          '.small-title';
+  $sidebar:             '.sidebar';
+/* Buttons Width ============================================================ */
+  $bLarge:              270px;
+  $bMedium:             240px;
+  $bSmall:              223px;
+/* ========================================================================== */

@@ -1,0 +1,40 @@
+	$usp:         '.usp';
+	$uspItem:     #{$usp}-item;
+	$uspImage:    #{$usp}-image;
+	$uspTitle:    #{$usp}-title;
+	$uspCentered: #{$usp}-centered;
+/* ========================================================================== */
+	#{$usp}{
+		align-items: flex-start;
+		flex-flow: row wrap;
+		padding-top: 6px;
+	}
+	#{$uspItem}{
+		margin: 0 0 30px;
+		@include flex(0 0 50%);
+	}
+	#{$uspImage}{
+		margin: 0 0 14px;
+	}
+	#{$uspTitle}{
+		margin: 0 0 11px;
+    color: #303234;
+	}
+/* ========================================================================== */
+	#{$uspCentered}{
+		#{$uspItem}{
+			margin: 0 0 15px;
+		}
+		#{$uspImage}{
+			margin: 0 0 24px;
+		}
+		#{$uspTitle}{
+			margin: 0 0 14px;
+			letter-spacing: 2px;
+		}
+		p{
+			line-height: 26px;
+			opacity: .9;
+		}
+	}
+/* ========================================================================== */

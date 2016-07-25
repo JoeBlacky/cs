@@ -1,0 +1,22 @@
+	$newsPage: '.page-news';
+/* ========================================================================== */
+	#{$newsPage}{
+		padding-top: 73px;
+		max-width: 1010px;
+		#{$pageTitle}{
+			margin: 0 0 60px;
+		}
+	}
+/* ========================================================================== */
+	@media screen and (max-width: $l){
+		#{$newsPage}{
+			padding-top: 48px;
+		}
+	}
+	@media screen and (max-width: $s){
+		#{$newsPage}{
+			#{$pageTitle}{
+				margin: 0 0 24px;
+			}
+		}
+	}

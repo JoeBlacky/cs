@@ -1,0 +1,87 @@
+	$intro:     '.page-intro';
+	$spIntro:   '.intro';
+/* Intro | Base Page ======================================================== */
+	#{$intro}{
+		margin: -144px 0 112px;
+    padding: 327px 0 87px;
+		background-size: cover;
+		background-color: #2A2C2D;
+		color: #FFF;
+		h1{
+			margin: 0 0 61px;
+		}
+		p{
+			max-width: 959px;
+			font-size: 26px;
+			line-height: 1.730769231;
+		}
+		&.reverse{
+			h1,
+			h2,
+			h3{
+				font-family: $headingsFont;
+			}
+			p{
+				font-family: $primaryFont;
+			}
+		}
+		&.scrollme{
+			overflow: hidden;
+		}
+	}
+/* Intro | Secondary Page =================================================== */
+	#{$spIntro}{
+		margin: 72px 0 89px;
+		text-align: center;
+		color: #747E80;
+		h1{
+			margin: 0 0 17px;
+			color: #303234;
+			@extend %pageTitle;
+		}
+		p{
+	    max-width: 600px;
+    	margin: 0 auto;
+			line-height: 1.555555556;
+		}
+	}
+/* ========================================================================== */
+	@media screen and (max-width: $l){
+		#{$intro}{
+			margin: -100px 0 66px;
+			padding-top: 150px;
+			padding-bottom: 28px;
+			h1{
+				margin: 0 0 34px;
+			}
+			p{
+				font-size: 20px;
+			}
+		}
+		#{$spIntro}{
+			margin: 50px 0 51px;
+		}
+	}
+	@media screen and (max-width: $s){
+		#{$intro}{
+			padding-top: 117px;
+			h1{
+				padding-right: 10px;
+			}
+			p{
+				font-size: inherit;
+				line-height: 1.5625;
+			}
+		}
+		#{$spIntro}{
+			h1{
+				margin: 0 0 27px;
+				font-size: 34px;
+				line-height: 1.176470588;
+			}
+			p{
+				line-height: 1.625;
+			}
+		}
+	}
+/* ========================================================================== */

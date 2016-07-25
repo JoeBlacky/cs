@@ -1,0 +1,127 @@
+	$workDetail: '.page-work-detail';
+	$wdIntro:		 '.wd-intro';
+	$wdSection:  '.wd-section';
+	$wdImage:		 '.image';
+/* ========================================================================== */
+	#{$workDetail}{
+		padding: 73px 0 33px;
+		color: #747E80;
+		#{$pageTitle}{
+			margin: 0 0 27px;
+			text-align: left;
+			color: #2F2F2F;
+		}
+	}
+/* Intro ==================================================================== */
+	#{$wdIntro}{
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-flow: row wrap;
+		.content{
+			padding: 0 0 68px;
+			@include flex(0 1 655px);
+		}
+		#{$sidebar}{
+			padding-left: 16.2%;
+		}
+	}
+/* Seciton ================================================================== */
+	#{$wdSection}{
+		h2{
+			margin: 0 0 21px;
+			font-size: 32px;
+			line-height: 38px;
+			color: #494B4E;
+		}
+		#{$wdImage}{
+			max-height: 828px;
+			margin: 0 0 62px;
+		}
+		.content{
+			max-width: 575px;
+			padding: 0 0 87px;
+		}
+		#{$button}{
+			margin-top: 42px;
+		}
+		&.middle{
+			#{$wdImage}{
+				max-height: 658px;
+			}
+			.content{
+				padding: 0 0 41px;
+			}
+		}
+	}
+/* Media Queries ============================================================ */
+	@media screen and (max-width: $mainWidth){
+		#{$wdIntro}{
+			justify-content: space-between;
+			#{$sidebar}{
+				padding-left: 30px;
+			}
+		}
+	}
+	@media screen and (max-width: $l){
+		#{$wdIntro}{
+			#{$sidebar}{
+				padding-left: 0;
+			}
+			.content{
+				padding: 0 0 31px;
+			}
+		}
+	}
+	@media screen and (max-width: $m){
+		#{$wdIntro}{
+			#{$sidebar}{
+				display: none;
+			}
+		}
+	}
+	@media screen and (max-width: $s){
+		#{$workDetail}{
+			padding: 23px 0 32px;
+			#{$pageTitle}{
+				margin: 0 0 41px;
+				font-size: 44px;
+			}
+		}
+		#{$wdSection}{
+			h2{
+				margin: 0 0 18px;
+				font-size: 22px;
+			}
+			.content{
+				padding: 0 0 28px;
+			}
+			#{$wdImage}{
+				margin: 0 0 44px;
+				height: 400px;
+			}
+			#{$button}{
+				width: 260px;
+				margin-top: 37px;
+			}
+			&.top{
+				h2{
+					margin: 0 0 8px;
+				}
+			}
+			&.middle{
+				.content{
+					padding: 0 0 30px;
+				}
+				#{$wdImage}{
+					height: 478px;
+					margin: 0 0 46px;
+				}
+			}
+			&.bottom{
+				#{$wdImage}{
+					display: none;
+				}
+			}
+		}
+	}
+/* ========================================================================== */

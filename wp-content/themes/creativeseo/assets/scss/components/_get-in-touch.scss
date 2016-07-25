@@ -1,0 +1,27 @@
+	$inTouch: '.in-touch';
+/* ========================================================================== */
+	#{$inTouch}{
+		margin-bottom: 57px;
+		h2{
+			margin-bottom: 15px;
+		}
+		p{
+			max-width: 588px;
+			line-height: 1.555555556;
+			color: #747E80;
+		}
+	}
+
+	@media screen and (max-width: $s){
+		#{$inTouch}{
+			margin-bottom: 34px;
+			h2{
+				margin-bottom: 20px;
+			}
+			p{
+				margin: 0;
+				line-height: 1.625;
+			}
+		}
+	}
+/* ========================================================================== */

@@ -1,0 +1,24 @@
+$benefits: '.benefits';
+$bContent: '.content';
+/* ========================================================================== */
+	#{$benefits}{
+		padding-top: 104px;
+		padding-bottom: 84px;
+		align-items: flex-start;
+		h2{
+			margin-bottom: 25px;
+		}
+		p{
+			opacity: 0.8;
+			color: #747E80;
+			font-size: 18px;
+		}
+		#{$bContent}{
+			@include flex(0 0 585px);
+			p{
+				max-width: 459px;
+				margin-bottom: 33px;
+			}
+		}
+	}
+/* ========================================================================== */

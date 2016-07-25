@@ -1,0 +1,72 @@
+	$contacts:     '.contacts';
+	$contactsInfo: '.contact-info';
+/* ========================================================================== */
+	#{$contacts}{
+		align-items: flex-start;
+		justify-content: flex-start;
+		padding-bottom: 128px;
+		h3{
+			margin: 0 0 16px;
+			font: 900 24px/2.083333333 $primaryFont;
+			letter-spacing: -0.13px;
+		}
+		#{$contactsInfo}{
+			max-width: 239px;
+			margin-left: 19%;
+		}
+	}
+	#{$contactsInfo},
+	#{$contactForm}{
+		width: 100%;
+	}
+	#{$contactsInfo}{
+		h3{
+			margin: 0 0 33px;
+		}
+		dl{
+			color: #747E80;
+		}
+		dd{
+			margin: 0 0 11px;
+			@extend %smallTitle;
+		}
+		p{
+			margin: 0 0 25px;
+			line-height: 1.555555556;
+		}
+	}
+
+	@media screen and (max-width: $m){
+		#{$contacts}{
+			padding-bottom: 47px;
+			#{$contactsInfo}{
+				margin-left: 0;
+			}
+			#{$contactForm}{
+				-webkit-box-ordinal-group: 2;
+			  -moz-box-ordinal-group: 2;
+			  -ms-flex-order: 2;
+			  -webkit-order: 2;
+			  order: 2;
+			}
+		}
+	}
+	@media screen and (max-width: $xs){
+		#{$contacts}{
+			flex-flow: row wrap;
+			#{$contactForm},
+			#{$contactsInfo}{
+				flex: 0 0 100%;
+			}
+		}
+		#{$contactsInfo}{
+			margin-bottom: 25px;
+			h3{
+				display: none;
+			}
+			p{
+				font-size: 18px;
+			}
+		}
+	}
+/* ========================================================================== */

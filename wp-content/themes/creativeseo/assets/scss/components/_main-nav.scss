@@ -1,0 +1,172 @@
+	$mainNav: 		'.main-nav';
+	$navItem: 		'.menu-item';
+	$handheldNav: '.handheld-nav';
+	$hnWidth: 		 40px;
+	$hnBg:				 #252525;
+/* Header =================================================================== */
+	#{$siteHeader}{
+		position: relative;
+		padding-top: 65px;
+		.logo{
+			position: relative;
+			z-index: 1;
+		}
+	}
+/* Main Nav ================================================================= */
+	#{$mainNav}{
+		width: 595px;
+		#{$navItem}{
+			display: inline-block;
+			font: 600 12px/14px $primaryFont;
+			letter-spacing: 1.7px;
+			color: #FFF;
+			text-transform: uppercase;
+			&:last-child{
+				a{
+					width: auto;
+					padding: 8px 23px;
+					font: inherit;
+					@extend %button;
+					&::before{
+						display: none;
+					}
+				}
+			}
+		}
+		a{
+			@extend %link;
+			&.active{
+				@extend %linkHover;
+			}
+		}
+	}
+	#{$handheldNav}{
+		display: none;
+		&.active{
+			&::before{
+				animation: scaleUp $slowSpeed forwards;
+				-webkit-animation: scaleUp $slowSpeed forwards;
+			}
+			&::after{
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		&::before{
+			content: $iMenu;
+			position: relative;
+			display: block;
+			width: $hnWidth;
+			height: $hnWidth;
+			text-align: center;
+			color: #FFF;
+			font: 14px/#{$hnWidth} $iconsFont;
+			border-radius: 50%;
+			background-color: rgba(#FFF, .1);
+			animation: scaleDown $slowSpeed forwards;
+			-webkit-animation: scaleDown $slowSpeed forwards;
+			z-index: 1;
+		}
+		&::after{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			right: 0;
+			top: 0;
+			background: $hnBg;
+			opacity: 0;
+			visibility: hidden;
+			transition:
+				opacity $fastSpeed linear,
+				visibility $fastSpeed linear;
+		}
+	}
+	#{$notHandheld}{
+		#{$mainNav}{
+			.menu-item{
+				a{
+					&:hover{
+						color: inherit;
+					}
+				}
+			}
+			a{
+				&:hover{
+					color: inherit;
+					&::before{
+						transform: scale(1) translate(0,0);
+						@extend %visible;
+					}
+				}
+			}
+		}
+	}
+/* Main Nav | Secondary Page ================================================ */
+	#{$secondaryPage}{
+		#{$mainNav}{
+			#{$navItem}{
+				color: #494B4E;
+				&:last-child{
+					a{
+						@extend %buttonShadowed;
+					}
+				}
+			}
+		}
+		#{$handheldNav}{
+			&::before{
+				background-color: #1A384F;
+			}
+		}
+	}
+/* Media Queries ============================================================ */
+	@media screen and (max-width: $l){
+
+		#{$siteHeader}{
+			padding-top: $mobileSpacing;
+			padding-bottom: $mobileSpacing;
+		}
+
+		#{$handheldNav}{
+			display: block;
+		}
+		#{$mainNav}{
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: 100%;
+			padding: $mobileSpacing*.75 $mobileSpacing;
+			background: $hnBg;
+			opacity: 0;
+			visibility: hidden;
+			box-shadow: 0 0 1px #FFF;
+			z-index: 1;
+			transition:
+				opacity $fastSpeed linear,
+				visibility $fastSpeed linear;
+			&.active{
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	/* Main Nav | Secondary Page ============================================== */
+		#{$secondaryPage}{
+			#{$mainNav}{
+				#{$navItem}{
+					color: #FFF;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: $s){
+		#{$mainNav}{
+			text-align: center;
+			flex-flow: row wrap;
+			#{$navItem}{
+				flex: 0 0 100%;
+				padding: $mobileSpacing*.5;
+			}
+		}
+	}
+/* ========================================================================== */

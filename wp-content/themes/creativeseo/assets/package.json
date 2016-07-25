@@ -1,0 +1,19 @@
+{
+  "name": "creative-seo",
+  "version": "0.0.1",
+  "description": "Creative SEO",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-postcss": "^0.8.0",
+    "grunt-spritesmith": "^6.3.1"
+  },
+  "dependencies": {
+    "ruby": "^0.6.0"
+  }
+}

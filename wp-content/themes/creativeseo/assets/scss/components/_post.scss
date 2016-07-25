@@ -1,0 +1,112 @@
+	$post: 					'.post';
+	$postTitle: 		'.post-title';
+	$postImage:     '.post-image';
+	$postAuthor:    '.post-author';
+	$postMeta:      '.post-meta';
+	$postData:      '.post-data';
+	$postContent:   '.post-content';
+/* Post Listing ============================================================= */
+	$postListing:   '.post-listing';
+	$postEntry:     '.post-entry';
+/* Post Listing ============================================================= */
+	#{$postListing}{
+		max-width: 952px;
+		margin: 0 auto;
+		#{$post}{
+			align-items: flex-start;
+			padding: 30px 0;
+		}
+		#{$postImage}{
+			box-shadow: 0 0px 20px 10px #F3F3F3;
+			@include flex(0 0 361px);
+			@extend %shadowed;
+		}
+		#{$postTitle}{
+			margin: 0 0 12px;
+			color: #303234;
+			font: 700 32px/1.1875 $primaryFont;
+		}
+		#{$postMeta}{
+			margin: 0 0 16px;
+			opacity: 0.7;
+		}
+		#{$postEntry}{
+			padding-left: 30px;
+		}
+		#{$postContent}{
+			font-size: 16px;
+			line-height: 1.75;
+		}
+	}
+	.no-date{
+		.post-date{
+			display: none;
+		}
+	}
+	#{$postMeta}{
+		font: 600 12px/1.166666667 $primaryFont;
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+		a{
+			color: $themeColor;
+			@extend %link;
+		}
+	}
+	#{$postImage}{
+		border-radius: 6px;
+		overflow: hidden;
+	}
+	#{$postContent}{
+		color: #303234;
+	}
+	#{$notHandheld}{
+		#{$postMeta}{
+			a{
+				&:hover{
+					@extend %linkHover;
+				}
+			}
+		}
+	}
+/* ========================================================================== */
+	@media screen and (max-width: $l){
+		#{$postListing}{
+			#{$postTitle}{
+				font-size: 28px;
+			}
+		}
+	}
+	@media screen and (max-width: $m){
+		#{$postListing}{
+			#{$postTitle}{
+				font-size: 24px;
+			}
+			#{$postImage}{
+				@include flex(0 0 250px);
+			}
+		}
+	}
+	@media screen and (max-width: $s){
+		#{$postListing}{
+			max-width: 400px;
+			margin: 0 auto;
+			#{$post}{
+				flex-flow: row wrap;
+				padding: 14px 0;
+			}
+			#{$postTitle}{
+				font-size: 22px;
+				line-height: 1.272727273;
+			}
+			#{$postImage}{
+				margin: 0 0 14px;
+				@include flex(0 0 100%);
+			}
+			#{$postEntry}{
+				padding-left: 0;
+			}
+			#{$postContent}{
+				display: none;
+			}
+		}
+	}
